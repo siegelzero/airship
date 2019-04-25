@@ -1,7 +1,7 @@
 # Example Contacts API
 
 ## Setup
-All necessary package are included in `requirements.txt`. To set up these packages in a virtual environment, execute
+All necessary packages are included in `requirements.txt`. To set up these packages in a virtual environment, execute
 ```bash
 make venv
 ```
