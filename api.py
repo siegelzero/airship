@@ -20,10 +20,6 @@ with open("./credentials.json") as f:
     credentials = json.load(f)
 
 
-# Type definitions
-JSONRow = Dict[str, str]
-
-
 # fake db schema for Contact
 @dataclass
 class Contact:
@@ -92,7 +88,7 @@ def verify_authorization(request):
         raise UnauthorizedError("Invalid username/password.")
 
 
-def format_response(rows):
+def format_response(rows) -> Response:
     """Method to format row data into JSON output. This is simple but
     extensible, in case we need to add paging data to the response."""
     return jsonify({'data': rows})
